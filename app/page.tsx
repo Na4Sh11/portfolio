@@ -174,7 +174,7 @@ export default function Home() {
     { title: 'Credit Card Fraud Detection', description: 'ML system with 98% accuracy using ensemble methods. Implemented feature engineering and model optimization pipelines.', tags: ['Python', 'Scikit-learn', 'Pandas', 'XGBoost'], link: 'https://github.com/Na4Sh11/creditcard-fraud-detection' },
     { title: 'BERT Sentiment Analysis', description: 'Fine-tuned BERT model for sentiment classification achieving 94% F1 score on customer reviews dataset.', tags: ['Python', 'PyTorch', 'Transformers', 'BERT'], link: 'https://github.com/Na4Sh11/Sentiment-Analysis-and-modeling-using-BERT-on-Amazon-reviews' },
     { title: 'London Bike Dashboard', description: 'Interactive Tableau dashboard analyzing London biking patterns using Kaggle dataset. Visualized usage trends, weather correlations, and peak hours.', tags: ['Tableau', 'Data Visualization', 'Kaggle', 'Analytics'], link: 'https://github.com/Na4Sh11/London_Bike_Tableau_Project' },
-    { title: 'Indian Election EDA', description: 'Exploratory data analysis on Indian Lok Sabha election dataset. Analyzed voting patterns, constituency demographics, and electoral trends across states.', tags: ['Python', 'Pandas', 'Matplotlib', 'Seaborn'], link: 'https://github.com/Na4Sh11/Election-2024-EDA' }
+    { title: 'Customer Churn Prediction System', description: 'Production ML system with A/B testing framework comparing Random Forest and Gradient Boosting models. Analyzed 7K+ telecom records, identified 3 high-risk segments representing 35% of churn. Optimized latency by 84% with Prometheus monitoring.', tags: ['Python', 'FastAPI', 'Docker', 'Prometheus'], link: 'https://github.com/Na4Sh11/ml-deployment-pipeline' }
   ];
 
   return (
