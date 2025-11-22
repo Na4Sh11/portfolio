@@ -95,7 +95,7 @@ const MobileNav = ({ isOpen, setIsOpen }: any) => {
         <FaTimes />
       </button>
       <div className="flex flex-col gap-8 mt-20 px-8">
-        {['About', 'Projects', 'Experience', 'Resumes', 'Contact'].map((item) => (
+        {['About', 'Projects', 'Experience', 'Resume', 'Contact'].map((item) => (
           <a key={item} href={`#${item.toLowerCase()}`} onClick={() => setIsOpen(false)} className="text-slate-300 hover:text-white transition text-xl">
             {item}
           </a>
@@ -186,7 +186,7 @@ export default function Home() {
         <div className="max-w-6xl mx-auto px-4 sm:px-6 py-4 flex justify-between items-center">
           <motion.div className="text-xl sm:text-2xl font-bold bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent" whileHover={{ scale: 1.05 }}>Priyadharshan</motion.div>
           <div className="hidden md:flex gap-6">
-            {['About', 'Projects', 'Experience', 'Resumes', 'Contact'].map((item, i) => (
+            {['About', 'Projects', 'Experience', 'Resume', 'Contact'].map((item, i) => (
               <motion.a key={item} href={`#${item.toLowerCase()}`} className="text-slate-300 hover:text-white transition relative group" initial={{ opacity: 0, y: -20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: i * 0.1 }}>
                 {item}
                 <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-blue-500 group-hover:w-full transition-all duration-300" />
@@ -213,7 +213,7 @@ export default function Home() {
             </motion.p>
             <motion.div className="flex flex-col sm:flex-row gap-4 justify-center mb-8 px-4" initial={{ y: 50, opacity: 0 }} animate={{ y: 0, opacity: 1 }} transition={{ delay: 0.8 }}>
               <MagneticButton href="#contact" className="px-6 sm:px-8 py-3 sm:py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-lg font-semibold hover:shadow-2xl hover:shadow-blue-500/50 transition text-center">Get in Touch</MagneticButton>
-              <MagneticButton href="#resumes" className="px-6 sm:px-8 py-3 sm:py-4 bg-slate-800 text-white rounded-lg font-semibold border border-blue-500/50 hover:bg-slate-700 transition flex items-center justify-center gap-2"><FaDownload /> View Resumes</MagneticButton>
+              <MagneticButton href="#resume" className="px-6 sm:px-8 py-3 sm:py-4 bg-slate-800 text-white rounded-lg font-semibold border border-blue-500/50 hover:bg-slate-700 transition flex items-center justify-center gap-2"><FaDownload /> View Resumes</MagneticButton>
             </motion.div>
             <motion.div className="flex gap-6 justify-center" initial={{ y: 50, opacity: 0 }} animate={{ y: 0, opacity: 1 }} transition={{ delay: 1 }}>
               {[
@@ -324,14 +324,14 @@ export default function Home() {
       <section id="resumes" className="py-12 sm:py-20 px-4 sm:px-6 bg-slate-900/50">
         <div className="max-w-6xl mx-auto">
           <motion.h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-6 sm:mb-8 text-center bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent" initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{ once: true }}>
-            Resumes
+            Resume
           </motion.h2>
           <motion.p className="text-slate-300 mb-8 sm:mb-12 text-center text-base sm:text-lg" initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{ once: true }}>
             Choose the version that matches your needs:
           </motion.p>
           <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-6 sm:gap-8">
             {[
-              { title: 'Software Engineer', desc: 'Full-stack development & system design', file: 'Priyadharshan_DS_Resume.pdf', gradient: 'from-blue-600 to-cyan-500' },
+              { title: 'Data Engineer', desc: 'ETL pipelines & data infrastructure', file: 'Priyadharshan_DS_Resume.pdf', gradient: 'from-purple-600 to-pink-500' },
             ].map((resume, i) => (
               <motion.div key={i} initial={{ opacity: 0, y: 50 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, delay: i * 0.1 }} viewport={{ once: true }} className="relative group">
                 <div className={`absolute inset-0 bg-gradient-to-br ${resume.gradient} opacity-0 group-hover:opacity-20 rounded-xl transition-opacity duration-300 blur-xl`} />
