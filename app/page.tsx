@@ -213,7 +213,7 @@ export default function Home() {
             </motion.p>
             <motion.div className="flex flex-col sm:flex-row gap-4 justify-center mb-8 px-4" initial={{ y: 50, opacity: 0 }} animate={{ y: 0, opacity: 1 }} transition={{ delay: 0.8 }}>
               <MagneticButton href="#contact" className="px-6 sm:px-8 py-3 sm:py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-lg font-semibold hover:shadow-2xl hover:shadow-blue-500/50 transition text-center">Get in Touch</MagneticButton>
-              <MagneticButton href="#resume" className="px-6 sm:px-8 py-3 sm:py-4 bg-slate-800 text-white rounded-lg font-semibold border border-blue-500/50 hover:bg-slate-700 transition flex items-center justify-center gap-2"><FaDownload /> View Resumes</MagneticButton>
+              <MagneticButton href="#resume" className="px-6 sm:px-8 py-3 sm:py-4 bg-slate-800 text-white rounded-lg font-semibold border border-blue-500/50 hover:bg-slate-700 transition flex items-center justify-center gap-2"><FaDownload /> View Resume</MagneticButton>
             </motion.div>
             <motion.div className="flex gap-6 justify-center" initial={{ y: 50, opacity: 0 }} animate={{ y: 0, opacity: 1 }} transition={{ delay: 1 }}>
               {[
@@ -259,9 +259,7 @@ export default function Home() {
         </div>
       </section>
 
-{/* PART 2 STARTS HERE - PASTE AFTER PART 1 */}
-      
-<section id="projects" className="py-12 sm:py-20 px-4 sm:px-6 relative">
+      <section id="projects" className="py-12 sm:py-20 px-4 sm:px-6 relative">
         <div className="absolute inset-0 bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950" />
         <div className="relative z-10 max-w-6xl mx-auto">
           <motion.h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-8 sm:mb-12 text-center bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent" initial={{ opacity: 0, y: 50 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
@@ -321,31 +319,25 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="resumes" className="py-12 sm:py-20 px-4 sm:px-6 bg-slate-900/50">
+      <section id="resume" className="py-12 sm:py-20 px-4 sm:px-6 bg-slate-900/50">
         <div className="max-w-6xl mx-auto">
           <motion.h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-6 sm:mb-8 text-center bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent" initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{ once: true }}>
             Resume
           </motion.h2>
           <motion.p className="text-slate-300 mb-8 sm:mb-12 text-center text-base sm:text-lg" initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{ once: true }}>
-            Choose the version that matches your needs:
+            Download my resume to learn more about my experience and skills
           </motion.p>
-          <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-6 sm:gap-8">
-            {[
-              { title: 'Data Engineer', desc: 'ETL pipelines & data infrastructure', file: 'Priyadharshan_DS_Resume.pdf', gradient: 'from-purple-600 to-pink-500' },
-            ].map((resume, i) => (
-              <motion.div key={i} initial={{ opacity: 0, y: 50 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, delay: i * 0.1 }} viewport={{ once: true }} className="relative group">
-                <div className={`absolute inset-0 bg-gradient-to-br ${resume.gradient} opacity-0 group-hover:opacity-20 rounded-xl transition-opacity duration-300 blur-xl`} />
-                <div className="relative bg-slate-800 p-6 sm:p-8 rounded-xl border border-slate-700 hover:border-blue-500 transition-all duration-300 text-center h-full flex flex-col justify-between">
-                  <div>
-                    <h3 className="text-xl sm:text-2xl font-bold text-white mb-3">{resume.title}</h3>
-                    <p className="text-slate-400 mb-4 sm:mb-6 text-sm sm:text-base">{resume.desc}</p>
-                  </div>
-                  <motion.a href={`/resumes/${resume.file}`} download className={`inline-flex items-center justify-center gap-2 px-4 sm:px-6 py-2 sm:py-3 bg-gradient-to-r ${resume.gradient} text-white rounded-lg font-semibold hover:shadow-2xl transition-all duration-300 text-sm sm:text-base`} whileHover={{ scale: 1.05, y: -5 }} whileTap={{ scale: 0.95 }}>
-                    <FaDownload /> Download
-                  </motion.a>
-                </div>
-              </motion.div>
-            ))}
+          <div className="flex justify-center">
+            <motion.div initial={{ opacity: 0, y: 50 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }} viewport={{ once: true }} className="relative group max-w-md w-full">
+              <div className="absolute inset-0 bg-gradient-to-br from-purple-600 to-pink-500 opacity-0 group-hover:opacity-20 rounded-xl transition-opacity duration-300 blur-xl" />
+              <div className="relative bg-slate-800 p-8 rounded-xl border border-slate-700 hover:border-blue-500 transition-all duration-300 text-center">
+                <h3 className="text-2xl font-bold text-white mb-3">Data Scientist</h3>
+                <p className="text-slate-400 mb-6">ML models, data analysis & statistical insights</p>
+                <motion.a href="/resumes/Priyadharshan_DS_Resume.pdf" download className="inline-flex items-center justify-center gap-2 px-6 py-3 bg-gradient-to-r from-purple-600 to-pink-500 text-white rounded-lg font-semibold hover:shadow-2xl transition-all duration-300" whileHover={{ scale: 1.05, y: -5 }} whileTap={{ scale: 0.95 }}>
+                  <FaDownload /> Download Resume
+                </motion.a>
+              </div>
+            </motion.div>
           </div>
         </div>
       </section>
