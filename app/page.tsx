@@ -331,9 +331,7 @@ export default function Home() {
           </motion.p>
           <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-6 sm:gap-8">
             {[
-              { title: 'Software Engineer', desc: 'Full-stack development & system design', file: 'Priyadharshan_SWE_Resume.pdf', gradient: 'from-blue-600 to-cyan-500' },
-              { title: 'Data Engineer', desc: 'ETL pipelines & data infrastructure', file: 'Priyadharshan_DE_Resume.pdf', gradient: 'from-purple-600 to-pink-500' },
-              { title: 'Data Scientist', desc: 'ML models & statistical analysis', file: 'Priyadharshan_DS_Resume.pdf', gradient: 'from-green-600 to-teal-500' }
+              { title: 'Software Engineer', desc: 'Full-stack development & system design', file: 'Priyadharshan_DS_Resume.pdf', gradient: 'from-blue-600 to-cyan-500' },
             ].map((resume, i) => (
               <motion.div key={i} initial={{ opacity: 0, y: 50 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, delay: i * 0.1 }} viewport={{ once: true }} className="relative group">
                 <div className={`absolute inset-0 bg-gradient-to-br ${resume.gradient} opacity-0 group-hover:opacity-20 rounded-xl transition-opacity duration-300 blur-xl`} />
